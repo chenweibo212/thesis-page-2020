@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PAGE3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"></head>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    .slider {
+      padding: 0;
+      position : fixed;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    }
+
+    .textholder{
+      position: absolute; /*newly added*/
+      right: 5px; /*newly added*/
+      top: 15px;/*newly added*/
+    }
+
+    * { 
+			    -webkit-touch-callout: none;
+			    -webkit-user-select: none;
+			    -khtml-user-select: none;
+			    -moz-user-select: none;
+			    -ms-user-select: none;
+			    user-select: none; 
+			}
+
+    body {
+      background-color: white;
+      opacity: 1;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    a {
+      color:black;
+      text-decoration: none;
+    }
+
+  </style>
+  <body>
+  <script src="./dist/page3_2.bundle.js"></script>
+  <div class="slider">
+  </div>
+  <div class="textholder"><p id="beckett" style="font-size:50px;"></p></div>
+        
+	    <script type="text/javascript">
+	    var p = document.querySelector('#beckett'),
+        text = "walk over to the other side and see what's next",
+        //test = ['walk', 'over', '<a href="#">here</a>'];
+		    words = [],
+		    index = 0;
+
+        words = text.split(" ");
+
+        var i = 0;
+        while(i<words.length){
+          words[i] = (words[i] === 'next') ? '<a href=/page4>next.</a>': words[i];
+    
+          i++;
+        }
+
+    console.log(words);
+
+		document.body.addEventListener('click', function(){
+		    var span = document.createElement('span');
+		    if(index < words.length){
+		        span.innerHTML = words[index] + " ";
+            index++;
+
+		    } else {
+		        index = 0;
+		    }
+		    p.appendChild(span);
+		})
+		</script>
+  </body>
+</html>

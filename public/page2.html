@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>stopit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://vjs.zencdn.net/7.7.5/video-js.css" rel="stylesheet" />
+
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script>
+    </script>
+    <style>
+      html, body {
+        background:black;
+      }
+      .container-cursor {
+        position: absolute;
+        top:150vh;
+        width:100%;
+        height: 35vh;
+      }
+      .video-js .vjs-control-bar { 
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }    
+
+      .video-wrapper{
+        float:left; 
+        width:33%;
+        height:35vh;
+      }
+
+      .container-lamp{
+        position: absolute;
+        margin-left:22vw;
+        margin-top:22vh;
+        width:70%;
+        height:69vh;
+        outline:none;
+      }
+
+      .container-cursor2{
+        position: absolute;
+        margin-left:0;
+        margin-top:150vh;
+        width:100%;
+        height:100vh;
+        outline:none;
+      }
+
+      .frame{
+        padding: 0;
+        position: relative;
+        top:0px;
+      }
+    </style>
+  </head>
+
+  <body>
+  <script src="./dist/page2.bundle.js"></script>
+<!-- <div style="width:100%; position: absolute;" >
+  <div id="video-wrapper" style="float:left; width:33%; border: 1px solid #000;">
+    <video
+    id="cursor01"
+    class="video-js vjs-default-skin vjs-big-play-centered"
+    autoplay="true"
+    controls="false"
+    preload="auto"
+    data-setup='{}'
+  >
+    <source src="mediaFile/cursor01.mp4" type="video/mp4" />
+  </video>
+  </div>
+  <div id="video-wrapper" style="float:left; width:33%; border: 1px solid #000;" />
+    <video
+    id="cursor02"
+    class="video-js vjs-default-skin vjs-big-play-centered"
+    autoplay="true"
+    controls="false"
+    preload="auto"
+    data-setup="{}"
+  >
+    <source src="mediaFile/cursor01.mp4" type="video/mp4" />
+  </video>
+  </div>
+  <div id="video-wrapper"  style="float:left; width:33%; border: 1px solid #000;">
+    <video
+    id="cursor01"
+    class="video-js vjs-default-skin vjs-big-play-centered"
+    autoplay="true"
+    controls="false"
+    preload="auto"
+    data-setup="{}"
+  >
+    <source src="mediaFile/cursor01.mp4" type="video/mp4" />
+  </video>
+  </div>
+</div> -->
+  <div class="container-lamp">
+      <video id="video" class="video-js vjs-default-skin vjs-fill vjs-big-play-centered" 
+            controls
+            width="100%" height="100%"
+            preload="metadata"
+            data-setup='{}'>
+        <source src="mediaFile/lamp01.mp4" type="video/mp4">
+      </video>
+  </div>
+
+  <div class="container-cursor2">
+    <video id="video" class="video-js vjs-default-skin vjs-fill vjs-big-play-centered" 
+          controls
+          width="100%" height="100%"
+          preload="metadata"
+          data-setup='{}'>
+      <source src="mediaFile/cursor9grid.mp4" type="video/mp4">
+    </video>
+</div>
+
+  <!-- <div class="container-cursor">
+    <div class="video-wrapper">
+    <video id="video" class="video-js vjs-default-skin vjs-fill vjs-big-play-centered" 
+          autoplay 
+          controls
+          width="100%" height="100%"
+          preload="metadata"
+          data-setup='{}'>
+      <source src="mediaFile/cursor01.mp4" type="video/mp4">
+    </video>
+    </div>
+    <div class="video-wrapper">
+      <video id="video" class="video-js vjs-default-skin vjs-fill vjs-big-play-centered"
+            autoplay
+            controls
+            width="100%" height="100%"
+            preload="metadata"
+            data-setup='{}'>
+        <source src="mediaFile/cursor01.mp4" type="video/mp4">
+      </video>
+    </div>  
+    <div class="video-wrapper">
+      <video id="video" class="video-js vjs-default-skin vjs-fill vjs-big-play-centered"
+            autoplay
+            controls
+            width="100%" height="100%"
+            preload="metadata"
+            data-setup='{}'>
+        <source src="mediaFile/cursor01.mp4" type="video/mp4">
+      </video>
+    </div>  
+  </div> -->
+
+  <div class="frame">
+    
+  </div>
+  <script src="https://vjs.zencdn.net/7.7.5/video.js"></script>
+  </body>
+</html>
